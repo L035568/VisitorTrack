@@ -155,14 +155,14 @@
       <Version>11.0.2</Version>
     </PackageReference>
     <PackageReference Include="sqlite-net-pcl">
-      <Version>1.4.118</Version>
+      <Version>1.5.231</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="2.5.1.527436" />
+    <PackageReference Include="Xamarin.Forms" Version="3.2.0.839982" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\VisitorTracker\VisitorTracker.csproj">
-      <Project>{45326713-A6AE-4D2D-9780-6DF072E5329A}</Project>
+      <Project>{0DF96683-CEDA-4782-9985-1D494FAB60EA}</Project>
       <Name>VisitorTracker</Name>
     </ProjectReference>
   </ItemGroup>
