@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VisitorTracker.Views.VisitorCollectionPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add Visitor" Clicked="OnNewVisitor"/>
+    </ContentPage.ToolbarItems>
+    <ListView 
+        x:Name="VisitorList"
+        ItemSelected="OnVisitorSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding VehicleNumber}">
+                    <TextCell.ContextActions>
+                        <MenuItem Text="Call" CommandParameter="{Binding .}" Clicked="OnCallVisitor"/>
+                        <MenuItem Text="Delete" CommandParameter="{Binding .}" IsDestructive="True" Clicked="OnDeleteVisitor"/>
+                    </TextCell.ContextActions>
+                </TextCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

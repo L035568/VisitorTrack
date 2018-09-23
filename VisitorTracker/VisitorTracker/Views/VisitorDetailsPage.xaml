@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VisitorTracker.Views.VisitorDetailsPage">
+    <TableView Intent="Form">
+        <TableRoot>
+            <TableSection Title="Visitor Details">
+                <EntryCell Label="Vehicle Number" Text="{Binding VehicleNumber}"/>
+                <EntryCell Label="Vistor Name" Text="{Binding Name}"/>
+                <EntryCell Label="Phone Number" Text="{Binding Name}" Keyboard="Numeric"/>
+            </TableSection>
+            <TableSection Title="Guest Details">
+                <EntryCell Label="Flat Number" Text="{Binding FlatNumber}"/>
+            </TableSection>
+            <TableSection Title="Others">
+                <EntryCell Label="Time IN" Text="{Binding TimeIn}"/>
+                <EntryCell Label="Signature" Text="{Binding Signature}"/>
+            </TableSection>
+            <TableSection>
+                <ViewCell>
+                    <Button Text="Save" Clicked="OnVisitorSaved"/>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
